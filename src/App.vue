@@ -8,7 +8,7 @@ import {RouterLink,RouterView} from "vue-router"
 <template>
   <WeightTrackerHeader/>
   <WeightTrackerForm/>
-  
+
 </template>
 
 <style scoped>
