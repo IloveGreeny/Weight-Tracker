@@ -6,10 +6,11 @@ let height = ref("");
 let bmi = ref(0);
 
 
+
 function addWeight() {
   event.preventDefault();
   let val = document.getElementById("weight").value;
-  weight.value = val
+  weight.value = val;
   let val2 = document.getElementById("height").value;
   height.value= val2;
 }
@@ -35,8 +36,8 @@ function calculate() {
   <div>
     <h1>Facts</h1>
     <div>
-      <p>Current weight {{weight}}</p>
-      <p>Current height {{height}}</p>
+      <p>Current weight {{weight}} kg</p>
+      <p>Current height {{height}} cm</p>
     </div>
   </div>
 
