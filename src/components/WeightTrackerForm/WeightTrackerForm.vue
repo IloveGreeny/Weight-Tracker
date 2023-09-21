@@ -16,7 +16,7 @@ function addWeight() {
 
 function calculate() {
   event.preventDefault();
-  
+
   console.log(weight.value);
   console.log(height.value);
   bmi.value = +weight.value/+height.value;
@@ -43,7 +43,16 @@ function calculate() {
   <div>
     <h1>Calculate BMI</h1>
     <button @click="calculate()">Calculate</button>
-    <p>{{bmi}}</p>
+    <div v-if="bmi < 25 " class="bmigreen">
+      <p >{{bmi}}</p>
+    </div>
+    <div v-else-if="bmi < 30" class="bmiyellow">
+      <p>{{bmi}}</p>
+    </div>
+    <div v-else class="bmired">
+      <p >{{bmi}}</p>
+    </div>
+
   </div>
 </form>
 </template>
@@ -51,5 +60,17 @@ function calculate() {
 
 
 <style scoped>
+
+.bmigreen {
+  background-color: green;
+}
+
+.bmired {
+  background-color: red;
+}
+
+.bmiyellow {
+  background-color: yellow;
+}
 
 </style>
