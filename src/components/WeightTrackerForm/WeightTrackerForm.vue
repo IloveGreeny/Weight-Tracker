@@ -3,19 +3,25 @@ import {ref} from "vue";
 
 let weight = ref("");
 let height = ref("");
-
+let bmi = ref(0);
 
 
 function addWeight() {
   event.preventDefault();
   let val = document.getElementById("weight").value;
   weight.value = val
-  console.log(weight);
   let val2 = document.getElementById("height").value;
   height.value= val2;
-  console.log(height);
 }
 
+function calculate() {
+  event.preventDefault();
+
+
+  console.log(weight.value);
+  console.log(height.value);
+  bmi.value = +weight.value/+height.value;
+}
 
 </script>
 
@@ -33,6 +39,12 @@ function addWeight() {
       <p>Current weight {{weight}}</p>
       <p>Current height {{height}}</p>
     </div>
+  </div>
+
+  <div>
+    <h1>Calculate BMI</h1>
+    <button @click="calculate()">Calculate</button>
+    <p>{{bmi}}</p>
   </div>
 </form>
 </template>

@@ -12,7 +12,6 @@ const router = createRouter({
     {
       path: '/bmi',
       name: 'bmi',
-      component : () => import("../views/WeightBMIView/WeightBMIView.vue")
     }
   ]
 })

@@ -8,9 +8,7 @@ import {RouterLink,RouterView} from "vue-router"
 <template>
   <WeightTrackerHeader/>
   <WeightTrackerForm/>
-
-  <RouterLink to="/bmi">Go to BMI calculations</RouterLink>
-  <RouterView></RouterView>
+  
 </template>
 
 <style scoped>
