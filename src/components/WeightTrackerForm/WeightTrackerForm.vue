@@ -16,8 +16,7 @@ function addWeight() {
 
 function calculate() {
   event.preventDefault();
-
-
+  
   console.log(weight.value);
   console.log(height.value);
   bmi.value = +weight.value/+height.value;
