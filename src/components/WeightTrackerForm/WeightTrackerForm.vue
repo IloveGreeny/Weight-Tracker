@@ -60,7 +60,7 @@ function calculate() {
       <h1>Weight History</h1>
       <ul>
         <li v-for="weights in weightList">
-          {{weights}}
+          {{weights + " kg"}}
         </li>
       </ul>
     </div>
