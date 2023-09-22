@@ -5,7 +5,6 @@ let weight = ref("");
 let height = ref("");
 let bmi = ref(0);
 let weightList = [];
-let counts = [];
 
 
 
@@ -14,7 +13,6 @@ function addWeight() {
   let val = document.getElementById("weight").value;
   weight.value = val;
   weightList.push(weight.value);
-  console.log(counts);
   let val2 = document.getElementById("height").value;
   height.value= val2;
 }
