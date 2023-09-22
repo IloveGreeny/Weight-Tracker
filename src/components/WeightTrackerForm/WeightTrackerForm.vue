@@ -4,6 +4,8 @@ import {ref} from "vue";
 let weight = ref("");
 let height = ref("");
 let bmi = ref(0);
+let weightList = [];
+let counts = [];
 
 
 
@@ -11,6 +13,8 @@ function addWeight() {
   event.preventDefault();
   let val = document.getElementById("weight").value;
   weight.value = val;
+  weightList.push(weight.value);
+  console.log(counts);
   let val2 = document.getElementById("height").value;
   height.value= val2;
 }
@@ -54,6 +58,14 @@ function calculate() {
       <p >{{bmi}}</p>
     </div>
 
+    <div>
+      <h1>Weight History</h1>
+      <ul>
+        <li v-for="weights in weightList">
+          {{weights}}
+        </li>
+      </ul>
+    </div>
   </div>
 </form>
 </template>
