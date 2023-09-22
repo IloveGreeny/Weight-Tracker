@@ -8,10 +8,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
     // component: App
-    },
-    {
-      path: '/bmi',
-      name: 'bmi',
     }
   ]
 })
